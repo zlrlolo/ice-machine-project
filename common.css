@@ -1,0 +1,43 @@
+html,body{
+    margin:0;
+    padding: 0;
+    background-color: rgb(247,247,247);
+}
+.control{
+    border: 2.5px solid rgb(34,177,249) ;
+    border-radius: 25px;
+    margin: 2% 30%;
+}
+
+.ice-button {
+     top: 600px;
+     position: absolute;
+     left: 50%;
+   transform: translate(-50%,-50%);}
+
+text{
+      margin: 40px  30% ;
+     font: 20px '微软雅黑','Microsoft YaHei','Apple LiGothic Medium';
+}
+.bt{
+     margin: 0 70px;
+     font-size: 16px;
+     display: inline-block;
+     width: 134px;
+     height: 41px;
+     line-height: 41px;
+     background: url(img/图标/viewdetail.jpg) no-repeat center;
+     color: #00b0ff;
+     text-align: center;
+     vertical-align: middle;
+     /*text-overflow: ellipsis;*/
+     text-decoration: none;
+     box-shadow: 0 0 1px transparent
+ }
+.bt:hover {
+    box-shadow: 0 0 10px transparent;
+    /*transition-delay: 0.1s;*/
+     transition-property: transform;
+     transition-duration: 0.3s;
+     transform: scale(90%)
+}
