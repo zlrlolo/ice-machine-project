@@ -1,43 +1,142 @@
-html,body{
-    margin:0;
+html, body {
+    margin: 0;
     padding: 0;
-    background-color: rgb(247,247,247);
-}
-.control{
-    border: 2.5px solid rgb(34,177,249) ;
-    border-radius: 25px;
-    margin: 2% 30%;
 }
 
-.ice-button {
-     top: 600px;
-     position: absolute;
-     left: 50%;
-   transform: translate(-50%,-50%);}
-
-text{
-      margin: 40px  30% ;
-     font: 20px '微软雅黑','Microsoft YaHei','Apple LiGothic Medium';
+html {
+    background-image: url("img/chaoshou-beijing.jpg");
+    /*background-image: url("img/截屏2022-07-21 21.33.01.png");*/
+    /*background-image: url("img/QQ20220722-140054@2x的副本.png");*/
+    background-position: top center;
+    background-size: cover;
+    height: 100%;
 }
-.bt{
-     margin: 0 70px;
-     font-size: 16px;
-     display: inline-block;
-     width: 134px;
-     height: 41px;
-     line-height: 41px;
-     background: url(img/图标/viewdetail.jpg) no-repeat center;
-     color: #00b0ff;
-     text-align: center;
-     vertical-align: middle;
-     /*text-overflow: ellipsis;*/
-     text-decoration: none;
-     box-shadow: 0 0 1px transparent
- }
+
+body {
+    position: relative;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-color: rgba(0, 0, 0,0.1);
+}
+
+.main {
+    position: absolute;
+    height: 650px;
+    width: 500px;
+    top: 40PX;
+    left: 55%;
+    background-color: rgba(220, 222, 223, 0.9);
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 0 6px black;
+}
+.ice_hr{
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+h1 {
+    line-height: 50px;
+    height: 40px;
+    color: #d7dee4;
+    text-shadow: -2px 0px 2px black, 0px -2px 2px black, 0px 5px 2px black, 5px 2px 2px black;;
+    font-size: 28px ;
+    margin: 0;
+}
+
+.control {
+    background-color: rgba(194, 196, 192, 0.9);
+    border: 2px solid #959496;
+    border-radius: 8px;
+    table-layout: fixed;
+    word-wrap: break-word;
+    overflow: scroll;
+}
+
+
+text {
+    font-size: 18px;
+    background-image: -webkit-linear-gradient(left, green, goldenrod, pink, blue, red 25%, green 35%,
+    blue 50%, yellow 60%, red 75%, pink 85%, blue 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: stream 15s infinite linear;
+    background-size: 200% 100%;
+}
+
+@keyframes stream {
+    /*//  匀速流动*/
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+
+@media screen and  (max-width: 950px) {
+    .control {
+        left: 20px;
+
+    }
+
+}
+
+::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+}
+
+/*.ice-button {*/
+/*    top: 600px;*/
+/*    position: absolute;*/
+/*    left: 55%;*/
+
+/*}*/
+
+text {
+    margin: 40px 30%;
+    font: 18px '微软雅黑', 'Microsoft YaHei', 'Apple LiGothic Medium';
+}
+.ice-button{
+    text-align:center;
+}
+.bt {
+    display: inline-block;
+    width: 134px;
+    height: 41px;
+    line-height: 41px;
+    /*background: url('img/图标/viewdetail.jpg') no-repeat center;*/
+    background-color: rgb(213, 223, 234,0.9);
+    border: 2px solid #959496;
+    margin: 0px 5px;
+    border-radius: 5px;
+    color: #d7dee4;
+    text-shadow: 0px 2px 2px black, 0px -2px 2px black, 2px 0px 2px black, -2px 0px 2px black;
+    font-size: 21px ;
+    text-align: center;
+    vertical-align: middle;
+    /*text-overflow: ellipsis;*/
+    text-decoration: none;
+    box-shadow: 0 0 1px transparent;
+
+}
+.yorn{
+    text-shadow: 0 1px 1px black, 0 -1px 1px black;
+    font-size: 15px ;
+    text-align:center;
+    color: #cfa13a;
+    line-height: 40px;
+    width: 380px;
+}
+
 .bt:hover {
     box-shadow: 0 0 10px transparent;
     /*transition-delay: 0.1s;*/
-     transition-property: transform;
-     transition-duration: 0.3s;
-     transform: scale(90%)
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transform: scale(90%)
 }
