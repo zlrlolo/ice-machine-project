@@ -95,13 +95,17 @@
     position: absolute;
     top: 400PX;
     left: 890px;
-    width: 701px;
+    /*width: 701px;*/
     height: 300px;
     background-color: rgba(220, 222, 223, 0.9);
     border: 2px solid black;
     border-radius: 8px;
     padding: 8px;
     box-shadow: 0 0 6px black;
+
+    /*临时*/
+    /*transform: translate(23px, -47px);*/
+    /*opacity: 0.8;*/
 }
 
 .backpack_bgc {
@@ -164,19 +168,37 @@ text {
 
 
 .result img {
+    /*opacity: 0.5;*/
     /*opacity: 0.3;*/
-    width: 71px;
-    height: 52px;
-    margin: 6px -0.7px -3.5px 9.1px;
+    width: 76px;
+    height: 56px;
+    /*margin: 6px -0.7px -3.5px 9.1px;*/
     display: inline;
     /* border: 4px solid #7d807c; */
     border-radius: 2px;
+    margin: 4px;
 }
 
-.result{
-    background-color: #c7c9d0;
-    background-image: linear-gradient(90deg,#ffffff 10px, rgba(0, 0, 0, 0) 10px), linear-gradient(#ffffff 10px, rgba(0, 0, 0, 0) 10px);
-    background-size: 80px 60px;
-    height: 780px;
+.result {
+    background:url("img/backpack_bg_p.png") repeat ;
+    /*background-size: 100%;*/
+
+    /*background-color: #c7c9d0;*/
+    /*background-image: linear-gradient(90deg, #ffffff 10px, rgba(0, 0, 0, 0) 10px), linear-gradient(#ffffff 10px, rgba(0, 0, 0, 0) 10px);*/
+    /*background-size: 80px 60px;*/
+    height: 832px;
+    line-height: 0;
+    width: 672px;
 }
 
+.texts {
+    text-shadow: 0 0 2px black;
+}
+.yellow {
+    color: #cfa13a;
+}
+
+.red {
+    color: orangered;
+
+}
