@@ -8,6 +8,7 @@
 </head>
 
 <body>
+<!--    挫冰机结果窗口-->
 <div class="ice_ever">
     <h1 class="ice_ever_h1">
         使用挫冰机结果
@@ -22,25 +23,28 @@
         </div>
     </div>
     <div class="ice_bgc">
+        <!--结果的图片和名字-->
         <div class="box_ice">
-            <img class="box_pic" src="img/挫冰产物/s等级/冰上衣.png" alt="">
+            <img class="box_pic" src="img/backpack_bg_p.png" alt="">
             <div class="fly-mid"></div>
-            <div class="box_name">冰上衣</div>
+            <div class="box_name"></div>
         </div>
 
     </div>
+
+    <!--按钮-->
     <div class="ice-button">
-        <a class="ice_bt bt" href="result1.html">再挫10次
-        </a>
-        <a class="ice_bt bt" href="result10.html">再挫100次
-        </a>
-        <a class="ice_bt bt" href="index.html">再想想
-        </a>
+        <div class="ice-button">
+            <a class="ice_bt bt bt10" href="result1.html">1+1&nbsp;40发
+            </a>
+            <a class="ice_bt bt bt100" href="result10.html">再来一组
+            </a>
+            <a class="ice_bt bt bt_back" href="index.html">不搓了
+            </a>
+        </div>
     </div>
 </div>
-</div>
-
-
+<!--背包-->
 <div class="backpack">
     <h1 class="ice_ever_h1 backpack_h1">
         背包
@@ -49,9 +53,6 @@
         <div class="ice_bgc backpack_bgc2">
             <div class="frame">
 
-                <div class="result">
-
-                </div>
             </div>
             <div>
                 <div class="frame">
@@ -62,10 +63,13 @@
         </div>
     </div>
 </div>
-</div>
+
 <div>
     <text class="ice_name">
     </text>
+</div>
+<!--喇叭-->
+<div class="message">
 </div>
 
 <script>
@@ -138,45 +142,68 @@
         return a[int];
     }
 
-    // 设定抽数為10
-    const count = 100;
-    console.log(name);
+    // 设定抽数為200
+    const count = 200;
+    // console.log(name);
 
-    // 循环输出10次随机结果；
-    for (let i = 0; i < count; i++) {
-        // 每一次取不等概率判定是哪一组
-        let lev;
-        let flag = 0;
-        let random = Math.random();
-        if (random >= 0 && random < 0.077) {
-            lev = lvs;
-            flag = 1;
-        } else if (random >= 0.077 && random < 0.192) {
-            lev = lva;
-        } else if (random >= 0.192 && random < 0.84) {
-            lev = lvb;
-        } else {
-            lev = lvc;
-        }
-        // 结果是这个组的随机某一个值
-        let result10 = choice(lev);
-        // 取到结果这个组的元素
-        const re = document.querySelector('.result');
-        // 将地址放入这个img里插入页面
-        const img = document.createElement("img");
-        img.setAttribute('src', result10);
-        re.appendChild(img);
-        console.log(flag);
-        // 检测是否是高级物品
-        if (flag === 1) {
-            // 取到内容物的名字
+    // 循环输出随机结果；
+    async function main() {
+        for (let i = 0; i < count; i++) {
+            await new Promise(function (resolve, reject) {
+                setTimeout(resolve, 50)
+            })
+            // 每一次取不等概率判定是哪一组
+            let lev;
+            let flag = 0;
+            let random = Math.random();
+            if (random >= 0 && random < 0.077) {
+                lev = lvs;
+                flag = 1;
+            } else if (random >= 0.077 && random < 0.192) {
+                lev = lva;
+            } else if (random >= 0.192 && random < 0.84) {
+                lev = lvb;
+            } else {
+                lev = lvc;
+            }
+            // 结果是这个组的随机某一个值
+            let result10 = choice(lev);
+            // 取到结果的图片地址
+            const re = document.querySelector('.result');
+            // 替换图片进临时窗口 box_poc 替换这个地址
+            let change_img = document.querySelector('.box_pic');
+            change_img.src = result10;
+            //取到结果的名称
             let name = result10.slice(13, result10.length - 4);
-            // // 插入ice——name里面
-            let ice_n = document.querySelector('.ice_name');
-            let n = document.createTextNode(name + ' ');
-            ice_n.appendChild(n);
+            // 替换名称进临时窗口box_name
+            let box_name = document.querySelector('.box_name');
+            box_name.textContent = name;
+            // 将地址放入这个img里插入背包页面
+            const img = document.createElement("img");
+            img.setAttribute('src', result10);
+            re.appendChild(img);
+            // 检测是否是高级物品
+            if (flag === 1) {
+                // 取到内容物的名字和需要加入的大区
+                let name = result10.slice(13, result10.length - 4);
+                let message = document.querySelector('.message');
+                // 生成一个div 属于ice_span
+                const ice_span = document.createElement('span');
+                ice_span.className = 'ice_span';
+                ice_span.innerHTML = '<span class="yellow">*&nbsp;在</span>\n' +
+                    '        <span class=>挫冰机（拉比皇家女仆)</span>\n' +
+                    '        <span class="yellow">获得</span>\n' +
+                    '        <span class="massage_name">' + name + '</span>\n' +
+                    '        <span>道具!</span>'
+                // 插入这个组
+                message.appendChild(ice_span);
+
+            }
         }
+
     }
+
+    main();
 
 </script>
 </body>

@@ -4,66 +4,104 @@
     <meta charset="UTF-8">
     <title>艾尔之光，上线。艾尔之光，挫冰。艾尔之光，弃坑。loop</title>
     <link rel="stylesheet" href="common.css">
-    <link rel="stylesheet" href="result.css">
 </head>
 
 <body>
-<div class="ice_ever">
-    <h1 class="ice_ever_h1">
-        使用挫冰机结果
-    </h1>
-    <hr class="ice_hr">
-    <div class="ice_got">
-        <div class="gotspan1">
-            <!--            &nbsp;&nbsp;-->
-            ❤
-        </div>
-        <div class="gotspan2">已取得下述道具
-        </div>
-    </div>
-    <div class="ice_bgc">
-        <div class="box_ice">
-            <img class="box_pic" src="img/挫冰产物/s等级/冰上衣.png" alt="">
-            <div class="fly-mid"></div>
-            <div class="box_name">冰上衣</div>
-        </div>
+<!--搓冰机界面-->
+<div class="ICE_index">
+    <div class="main">
+        <h1> 使用挫冰机 </h1>
+        <hr>
 
-    </div>
-    <div class="ice-button">
-        <a class="ice_bt bt bt10" href="result1.html">再挫10次
-        </a>
-        <a class="ice_bt bt bt100" href="result10.html">再挫100次
-        </a>
-        <a class="ice_bt bt bt_back" href="index.html">再想想
-        </a>
-    </div>
-</div>
-</div>
-<div class="backpack">
-    <h1 class="ice_ever_h1 backpack_h1">
-        背包
-    </h1>
-    <div class="ice_bgc backpack_bgc">
-        <div class="ice_bgc backpack_bgc2">
-            <div class="frame">
-
+        <div class="control">
+            <div class="ice-img">
+                <img class=ice-machine alt="点击开始挫冰" src="img/icemachine-bt1.png">
             </div>
-            <div>
+        </div>
+        <div class="ice-button">
+            <div class="yorn">
+                ❤&nbsp;&nbsp;是否要使用挫冰机？
+            </div>
+            <a class="bt yes" href="#">确认
+            </a>
+            <a class="bt no" href="#">取消
+            </a>
+        </div>
+    </div>
+
+</div>
+<!--挫冰机界面结束-->
+
+<!--搓40次的界面-->
+<div class="t40">
+    <!--    挫冰机结果窗口-->
+    <div class="ice_ever">
+        <h1 class="ice_ever_h1">
+            使用挫冰机结果
+        </h1>
+        <hr class="ice_hr">
+        <div class="ice_got">
+            <div class="gotspan1">
+                <!--            &nbsp;&nbsp;-->
+                ❤
+            </div>
+            <div class="gotspan2">已取得下述道具
+            </div>
+        </div>
+        <div class="ice_bgc">
+            <!--结果的图片和名字-->
+            <div class="box_ice">
+                <img class="box_pic" src="img/backpack_bg_p.png" alt="">
+                <div class="fly-mid"></div>
+                <div class="box_name"></div>
+            </div>
+
+        </div>
+
+        <!--按钮-->
+        <div class="ice-button">
+            <a class="ice_bt bt bt40" href="#">1+1&nbsp;40发
+            </a>
+            <a class="ice_bt bt bt200" href="#">再来一组
+            </a>
+            <a class="ice_bt bt bt_back" href="#">不搓了
+            </a>
+        </div>
+    </div>
+    <!--背包-->
+    <div class="backpack">
+        <h1 class="ice_ever_h1 backpack_h1">
+            背包
+        </h1>
+        <div class="ice_bgc backpack_bgc">
+            <div class="ice_bgc backpack_bgc2">
                 <div class="frame">
-                    <div class="result">
+                </div>
+                <div>
+                    <div class="frame">
+                        <div class="result">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-</div>
-<div>
-    <text class="ice_name">
-    </text>
-</div>
 
+    <div>
+        <text class="ice_name">
+        </text>
+    </div>
+    <!--喇叭-->
+    <div class="message">
+    </div>
+</div>
+<!--搓40次的界面结束-->
+
+<!--js部分-->
 <script>
+
+    // 制作搓冰的函数
+    function ice_play(count) {
     const lvs = [
         "img/挫冰产物/s等级/冰上衣.png",
         "img/挫冰产物/s等级/冰下衣.png",
@@ -125,71 +163,105 @@
         "img/挫冰产物/c等级/艾丽西昂宝箱.png",
         "img/挫冰产物/c等级/艾尔结晶未鉴定.png",
     ]
-
-    // 如果点击了再搓10次
-    // let begin10 = document.querySelector(".bt10");
-    //
-    // begin10.addEventListener('click', function () {
-    //     let timer = setInterval(function () {
-    //
-    //     }, 1000)
-    // })
-
-
-    // 做一个随机输出数组中值的函数
-    function choice(a) {
-        let l = a.length;
-        let int = Math.floor(Math.random() * Math.floor(l));
-        return a[int];
-    }
-
-    // 设定抽数為10
-    const count = 10;
-    console.log(name);
-
-    // 循环输出10次随机结果；
-    async function main() {
-        for (let i = 0; i < count; i++) {
-             await new Promise(function (resolve, reject) {
-                 setTimeout(resolve,100)
-             })
-            // 每一次取不等概率判定是哪一组
-            let lev;
-            let flag = 0;
-            let random = Math.random();
-            if (random >= 0 && random < 0.077) {
-                lev = lvs;
-                flag = 1;
-            } else if (random >= 0.077 && random < 0.192) {
-                lev = lva;
-            } else if (random >= 0.192 && random < 0.84) {
-                lev = lvb;
-            } else {
-                lev = lvc;
-            }
-
-            // 结果是这个组的随机某一个值
-            let result10 = choice(lev);
-            // 取到结果这个组的元素
-            const re = document.querySelector('.result');
-            // 将地址放入这个img里插入页面
-            const img = document.createElement("img");
-            img.setAttribute('src', result10);
-            re.appendChild(img);
-            console.log(flag);
-            // 检测是否是高级物品
-            if (flag === 1) {
-                // 取到内容物的名字
-                let name = result10.slice(13, result10.length - 4);
-                // // 插入ice——name里面
-                let ice_n = document.querySelector('.ice_name');
-                let n = document.createTextNode(name + ' ');
-                ice_n.appendChild(n);
-            }
+        // 做一个随机输出数组中值的函数
+        function choice(a) {
+            let l = a.length;
+            let int = Math.floor(Math.random() * Math.floor(l));
+            return a[int];
         }
+        // 循环输出随机结果；
+        async function main() {
+            for (let i = 0; i < count; i++) {
+                await new Promise(function (resolve, reject) {
+                    setTimeout(resolve, 100)
+                })
+                // 每一次取不等概率判定是哪一组
+                let lev;
+                let flag = 0;
+                let random = Math.random();
+                if (random >= 0 && random < 0.077) {
+                    lev = lvs;
+                    flag = 1;
+                } else if (random >= 0.077 && random < 0.192) {
+                    lev = lva;
+                } else if (random >= 0.192 && random < 0.84) {
+                    lev = lvb;
+                } else {
+                    lev = lvc;
+                }
+                // 结果是这个组的随机某一个值
+                let result10 = choice(lev);
+                // 取到结果的图片地址
+                const re = document.querySelector('.result');
+                // 替换图片进临时窗口 box_poc 替换这个地址
+                let change_img = document.querySelector('.box_pic');
+                change_img.src = result10;
+                //取到结果的名称
+                let name = result10.slice(13, result10.length - 4);
+                // 替换名称进临时窗口box_name
+                let box_name = document.querySelector('.box_name');
+                box_name.textContent = name;
+                // 将地址放入这个img里插入背包页面
+                const img = document.createElement("img");
+                img.setAttribute('src', result10);
+                re.appendChild(img);
+                // 检测是否是高级物品
+                if (flag === 1) {
+                    // 取到内容物的名字和需要加入的大区
+                    let name = result10.slice(13, result10.length - 4);
+                    let message = document.querySelector('.message');
+                    // 生成一个div 属于ice_span
+                    const ice_span = document.createElement('span');
+                    ice_span.className = 'ice_span';
+                    ice_span.innerHTML = '<span class="yellow">*&nbsp;在</span>\n' +
+                        '        <span class=>挫冰机（拉比皇家女仆)</span>\n' +
+                        '        <span class="yellow">获得</span>\n' +
+                        '        <span class="massage_name">' + name + '</span>\n' +
+                        '        <span>道具!</span>'
+                    // 插入这个组
+                    message.appendChild(ice_span);
+                }
+            }
 
+        }
+        main();
     }
-    main();
+
+    // 挫冰机确认按钮用途
+    let yes = document.querySelector('.yes');
+    let no = document.querySelector('.no');
+    let ICE_index = document.querySelector('.ICE_index');
+    let t40 = document.querySelector('.t40');
+    yes.addEventListener('click', function () {
+        ICE_index.style.display = 'none';
+        t40.style.display = 'block';
+    });
+    // t40 界面按钮用途
+    let bt40 = document.querySelector('.bt40');
+    let bt200 = document.querySelector('.bt200');
+    let back = document.querySelector('.bt_back');
+    let backpack_img=document.querySelector('.result');
+    let message_name=document.querySelector('.message');
+    bt40.addEventListener('click',
+        function () {
+            ice_play(40);
+            backpack_img.innerHTML="";
+            message_name.innerHTML='';
+        });
+    bt200.addEventListener('click',
+        function () {
+            ice_play(200);
+            backpack_img.innerHTML="";
+            message_name.innerHTML='';
+        })
+
+    back.addEventListener('click', function () {
+        ICE_index.style.display = 'block';
+        t40.style.display = 'none';
+        backpack_img.innerHTML="";
+        message_name.innerHTML='';
+    });
+
 
 </script>
 </body>
