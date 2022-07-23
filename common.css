@@ -14,54 +14,53 @@ html {
 
 body {
     position: relative;
-    font-size: 0.833vw;
 }
 
 
 hr {
     border: 0;
-    height: 0.119vw;
+    height: 0.02rem;
     background-color: rgba(0, 0, 0, 0.1);
 }
 
 .ice-machine {
-    width: 23.81vw;
-    height: 23.81vw;
-    margin: 2.976vw auto;
+    width: 4rem;
+    height: 4rem;
+    margin: 0.5rem auto;
     display: block;
 }
 
 .main {
     position: absolute;
-    height: 38.69vw;
-    width: 29.762vw;
-    top: 2.381vw;
+    height: 6.5rem;
+    width: 5rem;
+    top: 0.4rem;
     left: 55%;
     background-color: rgba(220, 222, 223, 0.8);
-    border: 0.119vw solid black;
-    border-radius: 0.476vw;
-    padding: 0.476vw;
-    box-shadow: 0 0 0.357vw black;
+    border: 0.02rem solid black;
+    border-radius: 0.08rem;
+    padding: 0.08rem;
+    box-shadow: 0 0 0.06rem black;
 }
 
 .ice_hr {
-    margin-top: 0.238vw;
+    margin-top: 0.04rem;
     margin-bottom: 0;
 }
 
 h1 {
-    line-height: 2.976vw;
-    height: 2.381vw;
+    line-height: 0.5rem;
+    height: 0.4rem;
     color: #d7dee4;
-    text-shadow: -0.119vw 0vw 0.119vw black, 0vw -0.119vw 0.119vw black, 0vw 0.298vw 0.119vw black, 0.298vw 0.119vw 0.119vw black;;
-    font-size: 1.667vw;
+    text-shadow: -0.02rem 0rem 0.02rem black, 0rem -0.02rem 0.02rem black, 0rem 0.05rem 0.02rem black, 0.05rem 0.02rem 0.02rem black;;
+    font-size: 0.28rem;
     margin: 0;
 }
 
 .control {
     background-color: rgba(194, 196, 192, 0.9);
-    border: 0.119vw solid #959496;
-    border-radius: 0.476vw;
+    border: 0.02rem solid #959496;
+    border-radius: 0.08rem;
     table-layout: fixed;
     word-wrap: break-word;
     overflow: scroll;
@@ -69,7 +68,7 @@ h1 {
 
 
 text {
-    font-size: 1.071vw;
+    font-size: 0.18rem;
     background-image: -webkit-linear-gradient(left, green, goldenrod, pink, blue, red 25%, green 35%,
     blue 50%, yellow 60%, red 75%, pink 85%, blue 100%);
     -webkit-text-fill-color: transparent;
@@ -89,9 +88,9 @@ text {
 }
 
 
-@media screen and  (max-width: 56.548vw) {
+@media screen and  (max-width: 9.5rem) {
     .control {
-        left: 1.19vw;
+        left: 0.2rem;
 
     }
 
@@ -102,15 +101,15 @@ text {
 }
 
 /*.ice-button {*/
-/*    top: 35.714vw;*/
+/*    top: 6rem;*/
 /*    position: absolute;*/
 /*    left: 55%;*/
 
 /*}*/
 
 text {
-    margin: 2.381vw 30%;
-    font: 1.071vw '微软雅黑', 'Microsoft YaHei', 'Apple LiGothic Medium';
+    margin: 0.4rem 30%;
+    font: 0.18rem '微软雅黑', 'Microsoft YaHei', 'Apple LiGothic Medium';
 }
 
 .ice-button {
@@ -119,38 +118,38 @@ text {
 
 .bt {
     display: inline-block;
-    width: 7.976vw;
-    height: 2.44vw;
-    line-height: 2.44vw;
+    width: 1.34rem;
+    height: 0.41rem;
+    line-height: 0.41rem;
     /*background: url('img/图标/viewdetail.jpg') no-repeat center;*/
     background-color: rgb(213, 223, 234, 0.9);
-    border: 0.119vw solid #959496;
-    margin: 0vw 0.298vw;
-    border-radius: 0.298vw;
+    border: 0.02rem solid #959496;
+    margin: 0rem 0.05rem;
+    border-radius: 0.05rem;
     color: #d7dee4;
-    text-shadow: 0vw 0.119vw 0.119vw black, 0vw -0.119vw 0.119vw black, 0.119vw 0vw 0.119vw black, -0.119vw 0vw 0.119vw black;
-    font-size: 1.25vw;
+    text-shadow: 0rem 0.02rem 0.02rem black, 0rem -0.02rem 0.02rem black, 0.02rem 0rem 0.02rem black, -0.02rem 0rem 0.02rem black;
+    font-size: 0.21rem;
     text-align: center;
     vertical-align: middle;
     /*text-overflow: ellipsis;*/
     text-decoration: none;
-    box-shadow: 0 0 0.06vw transparent;
+    box-shadow: 0 0 0.01rem transparent;
 
 }
 
 .yorn {
-    text-shadow: 0 0.06vw 0.06vw black, 0 -0.06vw 0.06vw black;
-    font-size: 0.893vw;
+    text-shadow: 0 0.01rem 0.01rem black, 0 -0.01rem 0.01rem black;
+    font-size: 0.15rem;
     text-align: center;
     color: #cfa13a;
-    line-height: 2.381vw;
-    width: 22.619vw;
+    line-height: 0.4rem;
+    width: 3.8rem;
 }
 
 .bt:hover {
-    box-shadow: 0 0 0.595vw transparent;
+    box-shadow: 0 0 0.1rem transparent;
     /*transition-delay: 0.1s;*/
-    border: 0.119vw solid #4f9fd7;
+    border: 0.02rem solid #4f9fd7;
 }
 
 .bt:active {
@@ -161,77 +160,77 @@ text {
 
 .ice_ever {
     /*opacity: 0.8;*/
-    /*transform: translate(-24.464vw, 14.881vw);*/
+    /*transform: translate(-4.11rem, 2.5rem);*/
     /*临时让窗口不显示测试用*/
     /*display: none;*/
     position: absolute;
-    height: 16.071vw;
-    width: 35.714vw;
-    top: 2.381vw;
+    height: 2.7rem;
+    width: 6rem;
+    top: 0.4rem;
     left: 55%;
     background-color: rgba(220, 222, 223, 0.9);
-    border: 0.119vw solid black;
-    border-radius: 0.476vw;
-    padding: 0.476vw;
-    box-shadow: 0 0 0.357vw black;
+    border: 0.02rem solid black;
+    border-radius: 0.08rem;
+    padding: 0.08rem;
+    box-shadow: 0 0 0.06rem black;
 }
 
 .ice_ever_h1 {
-    line-height: 1.786vw;
-    height: 1.786vw;
-    margin: 0.119vw 0 0 0.476vw;
+    line-height: 0.3rem;
+    height: 0.3rem;
+    margin: 0.02rem 0 0 0.08rem;
 }
 
 .backpack_h1 {
-    margin: 0.417vw 0 0 0.833vw;
+    margin: 0.07rem 0 0 0.14rem;
 }
 
 .gotspan1 {
-    text-shadow: 0 0.06vw 0.06vw black, 0 -0.06vw 0.06vw black;
-    font-size: 1.488vw;
+    text-shadow: 0 0.01rem 0.01rem black, 0 -0.01rem 0.01rem black;
+    font-size: 0.25rem;
     color: #cfa13a;
-    width: 1.19vw;
+    width: 0.2rem;
     display: block;
-    margin-left: 1.012vw;
+    margin-left: 0.17rem;
 }
 
 .gotspan2 {
     display: block;
     color: #686868;
-    margin: 0.357vw 0 0vw 0.655vw;
+    margin: 0.06rem 0 0rem 0.11rem;
 }
 
 .box_pic {
-    width: 5.357vw;
-    height: 5.357vw;
+    width: 0.9rem;
+    height: 0.9rem;
     display: block;
-    margin: 0.893vw;
+    margin: 0.15rem;
 }
 
 .box_name {
     display: block;
-    line-height: 7.083vw;
+    line-height: 1.19rem;
     color: #686868;
-    margin: 0 0.595vw;
-    font-size: 1.488vw;
+    margin: 0 0.1rem;
+    font-size: 0.25rem;
 }
 
 .ice_bgc {
-    padding: 0.417vw;
+    padding: 0.07rem;
     background-color: rgba(163, 168, 170);
-    border: 0.119vw solid #959496;
-    border-radius: 0.476vw;
+    border: 0.02rem solid #959496;
+    border-radius: 0.08rem;
     table-layout: fixed;
     word-wrap: break-word;
     overflow: scroll;
-    margin: -0.179vw 0 0 0.357vw;
+    margin: -0.03rem 0 0 0.06rem;
 }
 
 .fly-mid {
     display: block;
-    height: 5.357vw;
-    width: 0.06vw;
-    margin: 0.893vw 0.595vw 0.595vw 0.595vw;
+    height: 0.9rem;
+    width: 0.01rem;
+    margin: 0.15rem 0.1rem 0.1rem 0.1rem;
     vertical-align: middle;
     background-color: #a4a8aa;
 }
@@ -239,8 +238,8 @@ text {
 .box_ice {
     display: flex;
     background-color: rgba(999, 999, 999, .9);
-    border: 0.179vw solid #959496;
-    border-radius: 0.476vw;
+    border: 0.03rem solid #959496;
+    border-radius: 0.08rem;
     table-layout: fixed;
     word-wrap: break-word;
     overflow: scroll;
@@ -253,34 +252,34 @@ text {
 .backpack {
     /*display: none;*/
     position: absolute;
-    top: 23.81vw;
-    left: 52.976vw;
-    /*width: 41.726vw;*/
-    height: 19.643vw;
+    top: 4rem;
+    left: 8.9rem;
+    /*width: 7.01rem;*/
+    height: 3.3rem;
     background-color: rgba(220, 222, 223, 0.9);
-    border: 0.119vw solid black;
-    border-radius: 0.476vw;
-    padding: 0.476vw;
-    box-shadow: 0 0 0.357vw black;
+    border: 0.02rem solid black;
+    border-radius: 0.08rem;
+    padding: 0.08rem;
+    box-shadow: 0 0 0.06rem black;
 
 }
 
 .backpack_bgc {
     padding: 0;
-    margin: 0.893vw 0.476vw 0.476vw 0.476vw;
+    margin: 0.15rem 0.08rem 0.08rem 0.08rem;
     background-color: rgba(163, 168, 170, 0.9);
-    height: 15.179vw;
+    height: 2.55rem;
 }
 
 .backpack_bgc2 {
     background-color: rgba(255, 255, 255, 0.9);
-    margin: 0.476vw;
-    padding: 0.417vw;
-    height: 13.095vw;
+    margin: 0.08rem;
+    padding: 0.07rem;
+    height: 2.2rem;
 }
 
 text {
-    padding: 0.595vw;
+    padding: 0.1rem;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -288,26 +287,26 @@ text {
 
 .ice_bt {
     display: inline-block;
-    width: 7.976vw;
-    height: 2.44vw;
-    line-height: 2.44vw;
+    width: 1.34rem;
+    height: 0.41rem;
+    line-height: 0.41rem;
     /*background: url('img/图标/viewdetail.jpg') no-repeat center;*/
     background-color: rgb(213, 223, 234, 0.9);
-    border: 0.119vw solid #959496;
-    border-radius: 0.298vw;
+    border: 0.02rem solid #959496;
+    border-radius: 0.05rem;
     color: #d7dee4;
-    text-shadow: 0 0.119vw 0.119vw black, 0 -0.119vw 0.119vw black, 0.119vw 0 0.119vw black, -0.119vw 0 0.119vw black;
-    font-size: 1.25vw;
+    text-shadow: 0 0.02rem 0.02rem black, 0 -0.02rem 0.02rem black, 0.02rem 0 0.02rem black, -0.02rem 0 0.02rem black;
+    font-size: 0.21rem;
     text-align: center;
     vertical-align: middle;
     /*text-overflow: ellipsis;*/
     text-decoration: none;
-    box-shadow: 0 0 0.06vw transparent;
-    margin: 0.536vw 0.774vw 0 0.476vw;
+    box-shadow: 0 0 0.01rem transparent;
+    margin: 0.09rem 0.13rem 0 0.08rem;
 }
 
 .total_text {
-    margin: 0.595vw 0.595vw 0;
+    margin: 0.1rem 0.1rem 0;
     padding: 0;
 }
 
@@ -319,41 +318,41 @@ text {
 .result img {
     /*opacity: 0.5;*/
     /*opacity: 0.3;*/
-    width: 4.524vw;
-    height: 3.333vw;
-    /*margin: 0.357vw -0.042vw -0.208vw 0.542vw;*/
+    width: 0.76rem;
+    height: 0.56rem;
+    /*margin: 0.06rem -0.006999999999999999rem -0.035rem 0.091rem;*/
     display: inline;
-    /* border: 0.238vw solid #7d807c; */
-    border-radius: 0.119vw;
-    margin: 0.238vw;
+    /* border: 0.04rem solid #7d807c; */
+    border-radius: 0.02rem;
+    margin: 0.04rem;
 }
 
 .result {
     background: url("img/backpack_bg_p.png") repeat;
     /*background-size: 100%;*/
+
     /*background-color: #c7c9d0;*/
-    /*background-image: linear-gradient(90deg, #ffffff 0.595vw, rgba(0, 0, 0, 0) 0.595vw), linear-gradient(#ffffff 0.595vw, rgba(0, 0, 0, 0) 0.595vw);*/
-    /*background-size: 4.762vw 3.571vw;*/
-    height: 49.524vw;
+    /*background-image: linear-gradient(90deg, #ffffff 0.1rem, rgba(0, 0, 0, 0) 0.1rem), linear-gradient(#ffffff 0.1rem, rgba(0, 0, 0, 0) 0.1rem);*/
+    /*background-size: 0.8rem 0.6rem;*/
+    height: 8.32rem;
     line-height: 0;
-    width: 40vw;
-    background-size: 5vw 3.81vw;
+    width: 6.72rem;
 }
 
 .message {
-    transform: translate(8.333vw, 25.774vw);
+    transform: translate(1.4rem, 4.33rem);
     background: rgba(215, 222, 228, 0.2);
-    height: 11.905vw;
-    width: 29.762vw;
+    height: 2rem;
+    width: 5rem;
     overflow: scroll;
 }
 
 .ice_span {
-    margin-left: 0.595vw;
-    text-shadow: -0.06vw 0 0.06vw black, 0 -0.06vw 0.06vw black;
+    margin-left: 0.1rem;
+    text-shadow: -0.01rem 0 0.01rem black, 0 -0.01rem 0.01rem black;
     color: orangered;
     display: block;
-    line-height: 1.786vw;
+    line-height: 0.3rem;
 }
 
 .yellow {
@@ -364,32 +363,77 @@ text {
     display: none;
 }
 
-/*@media screen and (max-width: 114.286vw) {*/
+html {
+    font-size: 5.952vw;
+}
+
+body {
+    font-size: 0.14rem;
+}
+
+@media screen and (orientation: portrait) {
+    html {
+        font-size: 11.905vw;
+    }
+
+    /*竖屏 css*/
+    .ice_ever, .backpack, .message {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .message {
+        transform: initial;
+        position: absolute;
+        top: 4rem;
+    }
+
+    .backpack {
+        top: 10rem;
+    }
+
+    /*.backpack {*/
+    /*    transform: translate(-25vw, 70vw);*/
+    /*}*/
+    /*.ice_bt {*/
+    /*    margin: 0;*/
+    /*}*/
+    /*.message {*/
+    /*    !*font-size: 1vw;*!*/
+    /*    transform: translate(30vw, 53vw);*/
+    /*}*/
+
+}
+
+
+/*@media screen and (max-width: 1920px) {*/
 /*    html {*/
-/*        font-size: 5.952vw;*/
+/*        font-size: 100px;*/
 /*    }*/
 /*}*/
 
-/*@media screen and (max-width: 81.31vw) {*/
+/*@media screen and (max-width: 1366px) {*/
 /*    html {*/
-/*        font-size: 5.952vw;*/
+/*        font-size: 100px;*/
 /*    }*/
 /*}*/
 
-/*@media screen and (max-width: 76.19vw) {*/
+/*@media screen and (max-width: 1280px) {*/
 /*    html {*/
-/*        font-size: 5.595vw;*/
+/*        font-size: 94px;*/
 /*    }*/
 /*}*/
 
-/*@media screen and (max-width: 60.952vw) {*/
+/*@media screen and (max-width: 1024px) {*/
 /*    html {*/
-/*        font-size: 4.464vw;*/
+/*        font-size: 75px;*/
 /*    }*/
 /*}*/
 
-/*@media screen and (max-width: 47.619vw) {*/
+/*@media screen and (max-width: 800px) {*/
 /*    html {*/
-/*        font-size: 3.512vw;*/
+/*        font-size: 59px;*/
 /*    }*/
 /*}*/
