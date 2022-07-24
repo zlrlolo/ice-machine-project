@@ -165,9 +165,9 @@ text {
     /*display: none;*/
     position: absolute;
     height: 2.7rem;
-    width: 6rem;
+    width: 6.5rem;
     top: 0.4rem;
-    left: 55%;
+    left: 54%;
     background-color: rgba(220, 222, 223, 0.9);
     border: 0.02rem solid black;
     border-radius: 0.08rem;
@@ -213,6 +213,7 @@ text {
     color: #686868;
     margin: 0 0.1rem;
     font-size: 0.25rem;
+    white-space:nowrap;
 }
 
 .ice_bgc {

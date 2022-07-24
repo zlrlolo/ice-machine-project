@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>艾尔之光，上线。艾尔之光，挫冰。艾尔之光，弃坑。loop</title>
     <link rel="stylesheet" href="common.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
 </head>
 
 <body>
@@ -63,7 +63,7 @@
         <div class="ice-button">
             <a class="ice_bt bt bt40" href="#">1+1&nbsp;40发
             </a>
-            <a class="ice_bt bt bt200" href="#">再来一组
+            <a class="ice_bt bt bt200" href="#">半组&nbsp;100发
             </a>
             <a class="ice_bt bt bt_back" href="#">不搓了
             </a>
@@ -76,98 +76,101 @@
         </h1>
         <div class="ice_bgc backpack_bgc">
             <div class="ice_bgc backpack_bgc2">
-<!--                <div class="frame">-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <div class="frame">-->
-                        <div class="result">
-                        </div>
-<!--                    </div>-->
+                <div class="result">
                 </div>
             </div>
         </div>
     </div>
-    <div>
-        <text class="ice_name">
-        </text>
-    </div>
-    <!--喇叭-->
-    <div class="message">
-    </div>
+</div>
+<div>
+    <text class="ice_name">
+    </text>
+
+<!--喇叭-->
+<div class="message">
+</div>
+</div>
 <!--搓40次的界面结束-->
 
 <!--js部分-->
 <script>
-
     // 制作搓冰的函数
     function ice_play(count) {
-    const lvs = [
-        "img/挫冰产物/s等级/冰上衣.png",
-        "img/挫冰产物/s等级/冰下衣.png",
-        "img/挫冰产物/s等级/冰发型.png",
-        "img/挫冰产物/s等级/冰手套.png",
-        "img/挫冰产物/s等级/冰武器.png",
-        "img/挫冰产物/s等级/冰鞋子.png",
-        "img/挫冰产物/s等级/牺牲者.png",
-        "img/挫冰产物/s等级/狂战士.png",
-        "img/挫冰产物/s等级/冰饰品娃娃.png",
-        "img/挫冰产物/s等级/冰饰品发带.png",
-        "img/挫冰产物/s等级/冰饰品耳环.png",
-        "img/挫冰产物/s等级/强化卷轴+10.png",
-        "img/挫冰产物/s等级/强化卷轴+7.png",
-        "img/挫冰产物/s等级/强化卷轴+8.png",
-        "img/挫冰产物/s等级/强化卷轴+9.png",
-        "img/挫冰产物/s等级/不灭的斗志.png",
-        "img/挫冰产物/s等级/三位一体之力.png",
-    ]
-    const lva = [
-        "img/挫冰产物/a等级/hp魔法石.png",
-        "img/挫冰产物/a等级/全水.png",
-        "img/挫冰产物/a等级/减伤魔法石.png",
-        "img/挫冰产物/a等级/动速魔法石.png",
-        "img/挫冰产物/a等级/暴击魔法石.png",
-        "img/挫冰产物/a等级/极大魔法石.png",
-        "img/挫冰产物/a等级/晋级时装宝箱.png",
-        "img/挫冰产物/a等级/追加伤害魔法石.png",
-        "img/挫冰产物/a等级/奥利哈刚武器饰品宝箱.png",
-    ]
-    const lvb = [
-        "img/挫冰产物/b等级/npc卡片.png",
-        "img/挫冰产物/b等级/npc卡片2.png",
-        "img/挫冰产物/b等级/npc卡片3.png",
-        "img/挫冰产物/b等级/全水.png",
-    ]
-    const lvc = [
-        "img/挫冰产物/c等级/光水晶球.png",
-        "img/挫冰产物/c等级/地水晶球.png",
-        "img/挫冰产物/c等级/拜德宝箱.png",
-        "img/挫冰产物/c等级/水水晶球.png",
-        "img/挫冰产物/c等级/沛塔宝箱.png",
-        "img/挫冰产物/c等级/火水晶球.png",
-        "img/挫冰产物/c等级/艾德宝箱.png",
-        "img/挫冰产物/c等级/魔奇宝箱.png",
-        "img/挫冰产物/c等级/厄泰拉宝箱.png",
-        "img/挫冰产物/c等级/哈梅尔宝箱.png",
-        "img/挫冰产物/c等级/拉诺斯宝箱.png",
-        "img/挫冰产物/c等级/暗之水晶球.png",
-        "img/挫冰产物/c等级/桑德斯宝箱.png",
-        "img/挫冰产物/c等级/艾尔结晶光.png",
-        "img/挫冰产物/c等级/艾尔结晶地.png",
-        "img/挫冰产物/c等级/艾尔结晶暗.png",
-        "img/挫冰产物/c等级/艾尔结晶水.png",
-        "img/挫冰产物/c等级/艾尔结晶火.png",
-        "img/挫冰产物/c等级/艾尔结晶风.png",
-        "img/挫冰产物/c等级/贝斯马宝箱.png",
-        "img/挫冰产物/c等级/风之水晶球.png",
-        "img/挫冰产物/c等级/艾丽西昂宝箱.png",
-        "img/挫冰产物/c等级/艾尔结晶未鉴定.png",
-    ]
+        const lvs = [
+            "img/挫冰产物/s等级/牺牲者.png",
+            "img/挫冰产物/s等级/狂战士.png",
+            "img/挫冰产物/s等级/强化卷轴Lv.10.png",
+            "img/挫冰产物/s等级/强化卷轴Lv.7.png",
+            "img/挫冰产物/s等级/强化卷轴Lv.8.png",
+            "img/挫冰产物/s等级/强化卷轴Lv.9.png",
+            "img/挫冰产物/s等级/不灭的斗志.png",
+            "img/挫冰产物/s等级/三位一体之力.png",
+            "img/挫冰产物/s等级/皇家女仆上衣（娜薇）.png",
+            "img/挫冰产物/s等级/皇家女仆下衣（娜薇）.png",
+            "img/挫冰产物/s等级/皇家女仆发型（娜薇）.png",
+            "img/挫冰产物/s等级/皇家女仆发带（娜薇）.png",
+            "img/挫冰产物/s等级/皇家女仆耳环（娜薇）.png",
+            "img/挫冰产物/s等级/皇家女仆鞋子（娜薇）.png",
+            "img/挫冰产物/s等级/皇家迷你女仆（娜薇）.png",
+            "img/挫冰产物/s等级/皇家女仆手套（娜薇）.png",
+            "img/挫冰产物/s等级/皇家女仆武器（娜薇）.png",
+        ]
+        const lva = [
+            "img/挫冰产物/a等级/HP增加特级魔法石.png",
+            "img/挫冰产物/a等级/晋级时装宝箱（7日）.png",
+            "img/挫冰产物/a等级/暴击特级魔法石png.png",
+            "img/挫冰产物/a等级/极大化特级魔法石.png",
+            "img/挫冰产物/a等级/减少伤害特级魔法石.png",
+            "img/挫冰产物/a等级/动作速度特级魔法石.png",
+            "img/挫冰产物/a等级/追加伤害特级魔法石.png",
+            "img/挫冰产物/a等级/奥利哈刚武器饰品宝箱.png",
+        ]
+        const lvb = [
+            "img/挫冰产物/b等级/史诗NPC卡片‘代码：Q-Proto_00’.png",
+            "img/挫冰产物/b等级/史诗NPC卡片‘绿色森林拉银’.png",
+            "img/挫冰产物/b等级/史诗NPC卡片‘铁血上校艾丹’.png",
+            "img/挫冰产物/b等级/史诗NPC卡片‘影子魔女斯皮卡’.png",
+            "img/挫冰产物/b等级/史诗NPC卡片‘痛苦的君主巴拉克’.png",
+            "img/挫冰产物/b等级/史诗NPC卡片‘风之射手阿梅利亚’.png",
+            "img/挫冰产物/b等级/史诗NPC卡片‘古代纳斯德公主苹果’.png",
+            "img/挫冰产物/b等级/史诗NPC卡片‘艾尔搜查队队长罗尔’.png",
+            "img/挫冰产物/b等级/史诗NPC卡片‘近卫队长冰雪公主诺娅’.png",
+            "img/挫冰产物/b等级/史诗NPC卡片‘红色骑士团十夫长范恩西欧’.png",
+            "img/挫冰产物/b等级/完全恢复药水宝箱.png",
+        ]
+        const lvc = [
+            "img/挫冰产物/c等级/拜德BOSS宝箱.png",
+            "img/挫冰产物/c等级/沛塔BOSS宝箱.png",
+            "img/挫冰产物/c等级/艾德BOSS宝箱.png",
+            "img/挫冰产物/c等级/魔奇BOSS宝箱.png",
+            "img/挫冰产物/c等级/厄泰拉BOSS宝箱.png",
+            "img/挫冰产物/c等级/哈梅尔BOSS宝箱.png",
+            "img/挫冰产物/c等级/拉诺斯BOSS宝箱.png",
+            "img/挫冰产物/c等级/桑德斯BOSS宝箱.png",
+            "img/挫冰产物/c等级/贝斯马BOSS宝箱.png",
+            "img/挫冰产物/c等级/光水晶球(250个).png",
+            "img/挫冰产物/c等级/水水晶球(250个).png",
+            "img/挫冰产物/c等级/地水晶球(250个）.png",
+            "img/挫冰产物/c等级/艾丽西昂BOSS宝箱.png",
+            "img/挫冰产物/c等级/暗之水晶球(250个).png",
+            "img/挫冰产物/c等级/风之水晶球(250个).png",
+            "img/挫冰产物/c等级/火之水晶球（250个）宝箱.png",
+            "img/挫冰产物/c等级/艾尔结晶（水）（30个.png",
+            "img/挫冰产物/c等级/艾尔结晶（光）（30个）.png",
+            "img/挫冰产物/c等级/艾尔结晶（地）（30个）.png",
+            "img/挫冰产物/c等级/艾尔结晶（暗）（30个）.png",
+            "img/挫冰产物/c等级/艾尔结晶（火）（30个）.png",
+            "img/挫冰产物/c等级/艾尔结晶（风）（30个）.png",
+            "img/挫冰产物/c等级/艾尔结晶（未鉴定）（30个）.png",
+        ]
+
         // 做一个随机输出数组中值的函数
         function choice(a) {
             let l = a.length;
             let int = Math.floor(Math.random() * Math.floor(l));
             return a[int];
         }
+
         // 循环输出随机结果；
         async function main() {
             for (let i = 0; i < count; i++) {
@@ -203,6 +206,7 @@
                 // 将地址放入这个img里插入背包页面
                 const img = document.createElement("img");
                 img.setAttribute('src', result10);
+                // console.log(result10)
                 re.appendChild(img);
                 // 检测是否是高级物品
                 if (flag === 1) {
@@ -223,6 +227,7 @@
             }
 
         }
+
         main();
     }
 
@@ -231,39 +236,48 @@
     let no = document.querySelector('.no');
     let ICE_index = document.querySelector('.ICE_index');
     let t40 = document.querySelector('.t40');
-    let message_name=document.querySelector('.message');
+    let message_name = document.querySelector('.message');
     yes.addEventListener('click', function () {
         ICE_index.style.display = 'none';
         t40.style.display = 'block';
-        message_name.style.display = 'block';
+        bt_voice_click();
     });
     // t40 界面按钮用途
     let bt40 = document.querySelector('.bt40');
     let bt200 = document.querySelector('.bt200');
     let back = document.querySelector('.bt_back');
-    let backpack_img=document.querySelector('.result');
+    let backpack_img = document.querySelector('.result');
     // let message_name=document.querySelector('.message');
     bt40.addEventListener('click',
         function () {
             ice_play(40);
-            backpack_img.innerHTML="";
-            message_name.innerHTML='';
+            backpack_img.innerHTML = "";
+            message_name.innerHTML = '';
+            message_name.style.display = 'block';
+            bt_voice_click();
         });
     bt200.addEventListener('click',
         function () {
-            ice_play(200);
-            backpack_img.innerHTML="";
-            message_name.innerHTML='';
+            ice_play(100);
+            backpack_img.innerHTML = "";
+            message_name.innerHTML = '';
+            message_name.style.display = 'block';
+            bt_voice_click();
         })
 
     back.addEventListener('click', function () {
         ICE_index.style.display = 'block';
         t40.style.display = 'none';
-        message_name.style.display='none';
-        backpack_img.innerHTML="";
-        message_name.innerHTML='';
+        message_name.style.display = 'none';
+        backpack_img.innerHTML = "";
+        message_name.innerHTML = '';
+        bt_voice_click();
     });
-
+// 音效部分
+    function bt_voice_click() {
+        const audio = document.createElement("audio");
+        audio.src = "/音效/点击按钮.mp3";
+        audio.play();}
 
 </script>
 </body>
