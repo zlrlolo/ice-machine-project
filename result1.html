@@ -76,18 +76,17 @@
         </h1>
         <div class="ice_bgc backpack_bgc">
             <div class="ice_bgc backpack_bgc2">
-                <div class="frame">
-                </div>
-                <div>
-                    <div class="frame">
+<!--                <div class="frame">-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <div class="frame">-->
                         <div class="result">
                         </div>
-                    </div>
+<!--                    </div>-->
                 </div>
             </div>
         </div>
     </div>
-
     <div>
         <text class="ice_name">
         </text>
@@ -95,7 +94,6 @@
     <!--喇叭-->
     <div class="message">
     </div>
-</div>
 <!--搓40次的界面结束-->
 
 <!--js部分-->
@@ -233,16 +231,18 @@
     let no = document.querySelector('.no');
     let ICE_index = document.querySelector('.ICE_index');
     let t40 = document.querySelector('.t40');
+    let message_name=document.querySelector('.message');
     yes.addEventListener('click', function () {
         ICE_index.style.display = 'none';
         t40.style.display = 'block';
+        message_name.style.display = 'block';
     });
     // t40 界面按钮用途
     let bt40 = document.querySelector('.bt40');
     let bt200 = document.querySelector('.bt200');
     let back = document.querySelector('.bt_back');
     let backpack_img=document.querySelector('.result');
-    let message_name=document.querySelector('.message');
+    // let message_name=document.querySelector('.message');
     bt40.addEventListener('click',
         function () {
             ice_play(40);
@@ -259,6 +259,7 @@
     back.addEventListener('click', function () {
         ICE_index.style.display = 'block';
         t40.style.display = 'none';
+        message_name.style.display='none';
         backpack_img.innerHTML="";
         message_name.innerHTML='';
     });
