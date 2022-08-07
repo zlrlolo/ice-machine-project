@@ -102,13 +102,13 @@ async function ice_play(count) {
         } else if (random >= 0.001 && random < 0.011) {
             lev = lvs2;
             flag = 1;
-        } else if (random >= 0.011 && random < 0.018) {
+        } else if (random >= 0.011 && random < 0.030) {
             lev = lvs3;
             flag = 1;
-        } else if (random >= 0.018 && random < 0.033) {
+        } else if (random >= 0.030 && random < 0.053) {
             lev = lvs4;
             flag = 1;
-        } else if (random >= 0.033 && random < 0.077) {
+        } else if (random >= 0.053 && random < 0.077) {
             lev = lvs5;
 
         } else if (random >= 0.077 && random < 0.192) {
